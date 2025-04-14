@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gợi ý thực đơn | AI Nutrition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>🔍 Gợi ý thực đơn dinh dưỡng</h2>
+        <p>Nhập thành phần dinh dưỡng (Calories, Protein, Carbs, Fat, Cholesterol, Sodium) để nhận thực đơn phù hợp.</p>
+        
+        <form id="nutrition-form">
+            <div class="form-group">
+                <label>Calories (kcal):</label>
+                <input type="number" id="calories" required>
+            </div>
+            <div class="form-group">
+                <label>Protein (g):</label>
+                <input type="number" id="protein" required>
+            </div>
+            <div class="form-group">
+                <label>Carbohydrates (g):</label>
+                <input type="number" id="carbs" required>
+            </div>
+            <div class="form-group">
+                <label>Fat (g):</label>
+                <input type="number" id="fat" required>
+            </div>
+            <div class="form-group">
+                <label>Cholesterol (mg):</label>
+                <input type="number" id="cholesterol" required>
+            </div>
+            <div class="form-group">
+                <label>Sodium (mg):</label>
+                <input type="number" id="sodium" required>
+            </div>
+
+            <button type="submit">Gợi ý thực đơn</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
